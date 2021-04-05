@@ -11,7 +11,9 @@
 const uint8_t ADDRESS[6] = "CKeyB";
 
 
-const int MAX_SHORTCUT_KEYS = 4;  // Maximum number of keys a shortcut can be, or max number of keys to send through the NRF24L01 per button.
+// Maximum number of keys a shortcut can be, or max number of keys to send through the NRF24L01 per button.
+// This needs to match with the receiver side.
+const int MAX_SHORTCUT_KEYS = 4;
 
 
 const int BTN_SHORTCUT_SIZE = (3 * MAX_SHORTCUT_KEYS) + (MAX_SHORTCUT_KEYS - 1) + 1;
@@ -22,8 +24,8 @@ struct ButtonInfo {
 };
 
 
-// All shortcuts are represented using their ASCII decimal/int value. Seperate each key by a space.
-// This can be found here: www.asciitable.com
+// All keys are represented using their ASCII decimal/int value. This can be found here: www.asciitable.com
+// First specify the pin number, then seperate each key for that button in a string by a space.
 const ButtonInfo BUTTONS_INFO[] = {{2, "80 119 82"},
                                    {1, "128 99"},
                                    {0, "128 118"},
@@ -74,7 +76,7 @@ void setup() {
 
 void loop() {
 
-    // Loop through all buttons and detect if any pressed, then send the button keys through radio using the nRF24L01.
+    // If any button pressed, then send the button keys through radio using the nRF24L01.
     for(int i = 0; i < N_BUTTONS; i++) {
         if(buttonObjs[i] -> pressed()) {
             ButtonInfo btnInfo = BUTTONS_INFO[i];

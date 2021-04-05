@@ -12,7 +12,9 @@ RF24 radio(CE_PIN, CSN_PIN);
 uint8_t ADDRESS[6] = "CKeyB";
 
 
-const int MAX_SHORTCUT_KEYS = 4;  // Maximum number of keys a shortcut can be, or max number of keys to send through the NRF24L01.
+// Maximum number of keys a shortcut can be, or max number of keys to send through the NRF24L01 per button.
+// This needs to match with the transmitter side.
+const int MAX_SHORTCUT_KEYS = 4;
 
 
 const int BTN_SHORTCUT_SIZE = (3 * MAX_SHORTCUT_KEYS) + (MAX_SHORTCUT_KEYS - 1) + 1;
@@ -40,9 +42,6 @@ void initRadio() {
 
 
 void setup() {
-    Serial.begin(115200);
-    Serial.println("Started");
-
     Keyboard.begin();
     
     initRadio();
