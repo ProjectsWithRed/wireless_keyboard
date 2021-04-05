@@ -2,8 +2,7 @@
 
 There is a [video](https://youtu.be/N5rOW5Bu1kc) associated with this repo, I highly recommend you watch it if you are going to use this repo.
 
-<iframe width="650" height="380" src="https://www.youtube.com/embed/N5rOW5Bu1kc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+[![Video](readme_imgs/thumbnail.png)](https://youtu.be/N5rOW5Bu1kc "Arduino wireless keyboard")
 
 # How to use
 
