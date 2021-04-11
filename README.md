@@ -47,3 +47,22 @@ Please refer to the `/3d_models` directory.
 
 ## Receiver
 <img src="readme_imgs/recv_wiring.png">
+
+
+# How to upload code to Attiny MCs
+
+- The Attiny MCs can be programmed just like any Arduino and it's very easy to upload code to them.
+- You just need a USBASP adapter, then simply make the connections as shown in the image below.
+
+<img src="readme_imgs/usbasp.PNG">
+
+
+- You will also need to install the Attiny boards using the [AttinyCore](https://github.com/SpenceKonde/ATTinyCore) board manager by placing this link `http://drazzy.com/package_drazzy.com_index.json` to your "Additional Boards Manager URLs", which can be accessed in `File > Preferences`.
+
+- From `Tools > Board`, choose your Attiny board with the no bootloader option.
+- Then go to `Tools > Programmer` and choose `USBasp (ATTinyCore)`, and then press `Tools > Burn Bootloader`.
+- Then to simply upload code, use `Sketch > Upload Using Programmer`.
+
+- You can use stripboards with some wires to make uploading code to the Attiny MCs more convenient:
+
+<img src="readme_imgs/attiny_stripboards.PNG">
