@@ -8,8 +8,10 @@ There is a [video](https://youtu.be/N5rOW5Bu1kc) associated with this repo, I hi
 
 ## Libraries needed
 
-- `RF24` by TMRh20, this can be installed directly from the Arduino library manager.
+*Installed directly from the Arduino library manager.
 
+- `RF24` by TMRh20.
+- `Button` by Michael Adams.
 
 ## For the transmitter
 
